@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -9,6 +10,7 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
+        $this->call(TruncateTables::class);
         $this->call(Production::class);
 
         Model::reguard();
@@ -31,6 +33,21 @@ class Development extends Seeder
     }
 }
 
+class TruncateTables extends Seeder
+{
+    public function run()
+    {
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        DB::table('password_resets')->truncate();
+        DB::table('permission_role')->truncate();
+        DB::table('permissions')->truncate();
+        DB::table('role_user')->truncate();
+        DB::table('roles')->truncate();
+        DB::table('users')->truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+    }
+}
+
 class StaffSeeder extends Seeder
 {
     public function run()
@@ -48,6 +65,12 @@ class StaffSeeder extends Seeder
         $staff->description = 'Staff';
         $staff->save();
 
+        $customer              = new Bican\Roles\Models\Role();
+        $customer->name        = 'Customer';
+        $customer->slug        = 'customer';
+        $customer->description = 'Customer';
+        $customer->save();
+
         // Create Users and assign roles
         $adminUser = factory(App\Models\User::class)->create([
             'name'         => 'Admin',
@@ -59,10 +82,18 @@ class StaffSeeder extends Seeder
 
         $staffUser = factory(App\Models\User::class)->create([
             'name'         => 'Staff',
-            'lastname_one' => 'User',
+            'lastname_one' => 'Staff',
             'email'        => 'staff@staff.com',
             'password'     => bcrypt('staff***123'),
         ]);
         $staffUser->attachRole($staff);
+
+        $customerUser = factory(App\Models\User::class)->create([
+            'name'         => 'Customer',
+            'lastname_one' => 'Customer',
+            'email'        => 'customer@customer.com',
+            'password'     => bcrypt('customer***123'),
+        ]);
+        $customerUser->attachRole($customer);
     }
 }
