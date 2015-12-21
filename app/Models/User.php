@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace Hotel\Models;
 
 use Bican\Roles\Contracts\HasRoleAndPermission as HasRoleAndPermissionContract;
 use Bican\Roles\Traits\HasRoleAndPermission;
