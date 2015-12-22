@@ -28,7 +28,7 @@ return [
     |
      */
 
-    'model'    => App\Models\User::class,
+    'model'    => Hotel\Models\User::class,
 
     /*
     |--------------------------------------------------------------------------
