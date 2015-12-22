@@ -26,11 +26,14 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth'       => \Hotel\Http\Middleware\Authenticate::class,
-        'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'guest'      => \Hotel\Http\Middleware\RedirectIfAuthenticated::class,
-        'role'       => \Bican\Roles\Middleware\VerifyRole::class,
-        'permission' => \Bican\Roles\Middleware\VerifyPermission::class,
-        'level'      => \Bican\Roles\Middleware\VerifyLevel::class,
+        'localize'              => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRoutes::class,
+        'localizationRedirect'  => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter::class,
+        'localeSessionRedirect' => \Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect::class,
+        'auth'                  => \Hotel\Http\Middleware\Authenticate::class,
+        'auth.basic'            => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+        'guest'                 => \Hotel\Http\Middleware\RedirectIfAuthenticated::class,
+        'role'                  => \Bican\Roles\Middleware\VerifyRole::class,
+        'permission'            => \Bican\Roles\Middleware\VerifyPermission::class,
+        'level'                 => \Bican\Roles\Middleware\VerifyLevel::class,
     ];
 }

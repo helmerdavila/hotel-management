@@ -5881,7 +5881,6 @@ body {
 .spark-splash-screen {
   color: #5a5a5a;
   font-family: 'Lato';
-  -webkit-font-smoothing: antialiased;
   /* Override bootstrap colors */ }
   .spark-splash-screen .splash-nav {
     margin-top: 40px; }
@@ -5916,6 +5915,13 @@ body {
     color: #5a5a5a;
     margin-right: 10px;
     text-decoration: none; }
+  .spark-splash-screen .splash-nav-link .dropdown {
+    margin-right: 10px;
+    margin-top: -3px; }
+    .spark-splash-screen .splash-nav-link .dropdown .btn-lg, .spark-splash-screen .splash-nav-link .dropdown .btn-group-lg > .btn {
+      border: 1px solid;
+      font-size: 16px;
+      padding: 12px 16px 12px 16px; }
   .spark-splash-screen .splash-nav-link-highlight a {
     color: #18576E; }
   .spark-splash-screen .splash-nav-link-highlight-border {

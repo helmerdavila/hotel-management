@@ -10,7 +10,7 @@
                 <div class="panel-body">
                     @include('common.error-alert', ['form' => 'default'])
 
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ route('getLogin') }}">
                         {!! csrf_field() !!}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
