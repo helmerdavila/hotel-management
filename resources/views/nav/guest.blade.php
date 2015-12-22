@@ -20,8 +20,12 @@
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Login / Registration Links -->
-                <li><a href="/login">Login</a></li>
-                <li><a href="/register">Register</a></li>
+                <li>
+                    <a href="/login">
+                        <i class="fa fa-key"></i>
+                        {{ trans('strings.loginButton') }}
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

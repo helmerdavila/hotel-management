@@ -41,16 +41,16 @@
                         <li class="splash-nav-link">
                             <div class="dropdown">
                                 <button class="btn btn-lg btn-primary dropdown-toggle" type="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    <i class="fa fa-language"></i>&nbsp;&nbsp;Language
+                                    <i class="fa fa-language"></i>&nbsp;&nbsp;{{ trans('strings.language.select') }}
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
-                                    <li><a href="/en">English</a></li>
-                                    <li><a href="/es">Spanish</a></li>
+                                    <li><a href="/en">{{ trans('strings.language.english') }}</a></li>
+                                    <li><a href="/es">{{ trans('strings.language.spanish') }}</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li class="splash-nav-link splash-nav-link-highlight-border">
-                            <a href="/login"><i class="fa fa-key"></i> Login</a>
+                            <a href="/login"><i class="fa fa-key"></i> {{ trans('strings.loginButton') }}</a>
                         </li>
                         {{-- <li class="splash-nav-link splash-nav-link-highlight-border"><a href="/register">Register</a></li> --}}
                     </ul>
@@ -203,7 +203,7 @@
             <div class="col-md-10 col-md-offset-1 text-center">
                 <div class="col-md-4 splash-customer">
                     <div class="splash-customer-avatar">
-                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/msurguy/128.jpg">
+                        <img src="https://placehold.it/128x128">
                     </div>
 
                     <div class="splash-customer-quote">
@@ -218,7 +218,7 @@
 
                 <div class="col-md-4 splash-customer">
                     <div class="splash-customer-avatar">
-                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/allisongrayce/128.jpg">
+                        <img src="https://placehold.it/128x128">
                     </div>
 
                     <div class="splash-customer-quote">
@@ -233,7 +233,7 @@
 
                 <div class="col-md-4 splash-customer">
                     <div class="splash-customer-avatar">
-                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/richcsmith/128.jpg">
+                        <img src="https://placehold.it/128x128">
                     </div>
 
                     <div class="splash-customer-quote">
@@ -253,7 +253,7 @@
             <!-- Company Information -->
             <div class="col-md-10 col-md-offset-1 splash-footer">
                 <div class="pull-left splash-footer-company">
-                    Copyright © {{ env('APPLICATION_NAME') }} - <a href="/terms">Terms Of Service</a>
+                    Copyright © {{ env('APPLICATION_NAME') }}
                 </div>
 
                 <!-- Social Icons -->
@@ -263,9 +263,6 @@
                     </a>
                     <a href="http://twitter.com">
                         <i class="fa fa-btn fa-twitter-square"></i>
-                    </a>
-                    <a href="http://github.com">
-                        <i class="fa fa-github-square"></i>
                     </a>
                 </div>
 
