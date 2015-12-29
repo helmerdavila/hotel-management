@@ -11,15 +11,15 @@
             </button>
 
             <!-- Branding Image -->
-            <a class="navbar-brand" href="/">
-                Spark
+            <a class="navbar-brand" href="{{ route('dashboard') }}">
+                <i class="fa fa-building-o"></i> {{ env('APPLICATION_NAME', 'Hotel') }}
             </a>
         </div>
 
         <div class="collapse navbar-collapse" id="spark-navbar-collapse">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
-                <li><a href="/home">Home</a></li>
+                <li><a href="{{ route('dashboard') }}">{{ trans('strings.homeDashboard') }}</a></li>
             </ul>
 
             <!-- Right Side Of Navbar -->

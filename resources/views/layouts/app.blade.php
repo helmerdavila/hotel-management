@@ -32,5 +32,7 @@
         <!-- Footer -->
         @include('common.footer')
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
 </body>
 </html>

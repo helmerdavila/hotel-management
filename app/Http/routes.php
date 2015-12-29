@@ -1,5 +1,7 @@
 <?php
 
+get('language/{lang?}', ['as' => 'changeLanguage', 'uses' => 'Auth\AuthController@changeLanguage']);
+
 Route::group([
     'prefix'     => LaravelLocalization::setLocale(),
     'middleware' => ['localeSessionRedirect', 'localizationRedirect'],
@@ -25,7 +27,5 @@ Route::group([
     post('password/reset', 'Auth\PasswordController@postReset');
 
     // Dashboard routes
-    get('/dashboard', function () {
-        return 'Login successfull, please write /logout up to close session';
-    });
+    get('/dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@home']);
 });

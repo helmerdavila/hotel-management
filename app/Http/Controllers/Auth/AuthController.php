@@ -10,7 +10,7 @@ use Validator;
 
 class AuthController extends Controller
 {
-    protected $loginPath    = '{LaravelLocalization::getCurrentLocale()}/login';
+    protected $loginPath    = '/login';
     protected $redirectPath = '/dashboard';
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;

@@ -1,14 +1,18 @@
 <?php
 
 return [
+    'emailLabel'    => 'E-mail Address',
+    'forgot'        => 'Forgot your password?',
+    'homeDashboard' => 'Home',
     'language'      => [
-        'select'  => 'Language',
         'english' => 'English',
+        'select'  => 'Language',
         'spanish' => 'Spanish',
     ],
     'loginButton'   => 'Login',
-    'emailLabel'    => 'E-mail Address',
+    'logout'        => 'Logout',
     'passwordLabel' => 'Password',
     'remember'      => 'Remember Me',
-    'forgot'        => 'Forgot your password?',
+    'settings'      => 'Settings',
+    'yourSettings'  => 'Your Settings',
 ];

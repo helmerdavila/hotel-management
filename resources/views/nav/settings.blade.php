@@ -1,25 +1,39 @@
-
 <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-        {{ auth()->user()->name }} <span class="caret"></span>
+        <i class="fa fa-user"></i> {{ auth()->user()->name }} <span class="caret"></span>
     </a>
 
-    <ul class="dropdown-menu" role="menu" v-if="user">
-        <!-- Settings -->
-        <li class="dropdown-header">Settings</li>
+    <ul class="dropdown-menu" role="menu">
+
+        <li class="dropdown-header">{{ trans('strings.settings') }}</li>
 
         <li>
             <a href="/settings">
-                <i class="fa fa-btn fa-fw fa-cog"></i>Your Settings
+                <i class="fa fa-btn fa-fw fa-cog"></i>{{ trans('strings.yourSettings') }}
             </a>
         </li>
 
-        <!-- Logout -->
+        <li class="divider"></li>
+
+        <li class="dropdown-header">{{ trans('strings.language.select') }}</li>
+
+        <li>
+            <a href="{{ LaravelLocalization::getLocalizedURL('en') }}">
+                <i class="fa fa-btn fa-fw fa-language"></i>{{ trans('strings.language.english') }}
+            </a>
+        </li>
+
+        <li>
+            <a href="{{ LaravelLocalization::getLocalizedURL('es') }}">
+                <i class="fa fa-btn fa-fw fa-language"></i>{{ trans('strings.language.spanish') }}
+            </a>
+        </li>
+
         <li class="divider"></li>
 
         <li>
             <a href="/logout">
-                <i class="fa fa-btn fa-fw fa-sign-out"></i>Logout
+                <i class="fa fa-btn fa-fw fa-sign-out"></i>{{ trans('strings.logout') }}
             </a>
         </li>
     </ul>

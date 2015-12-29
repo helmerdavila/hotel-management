@@ -1,14 +1,18 @@
 <?php
 
 return [
+    'emailLabel'    => 'Correo Electrónico',
+    'forgot'        => '¿Olvidaste tu contraseña?',
+    'homeDashboard' => 'Inicio',
     'language'      => [
-        'select'  => 'Idioma',
         'english' => 'Inglés',
+        'select'  => 'Idioma',
         'spanish' => 'Español',
     ],
     'loginButton'   => 'Acceder',
-    'emailLabel'    => 'Correo Electrónico',
+    'logout'        => 'Cerrar Sesión',
     'passwordLabel' => 'Contraseña',
     'remember'      => 'Recordarme',
-    'forgot'        => '¿Olvidaste tu contraseña?',
+    'settings'      => 'Preferencias',
+    'yourSettings'  => 'Tus preferencias',
 ];
