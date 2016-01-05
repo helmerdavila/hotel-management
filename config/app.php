@@ -153,6 +153,7 @@ return [
         Bican\Roles\RolesServiceProvider::class,
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        HieuLe\Active\ActiveServiceProvider::class,
     ],
 
     /*
@@ -204,6 +205,7 @@ return [
 
         'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
         'Debugbar'            => Barryvdh\Debugbar\Facade::class,
+        'Active'              => HieuLe\Active\Facades\Active::class,
     ],
 
 ];

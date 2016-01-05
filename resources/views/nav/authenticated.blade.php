@@ -31,8 +31,8 @@
                     </a>
 
                     <ul class="dropdown-menu" role="dropdown">
-                        <li><a href="#">{{ trans('strings.manage.customers') }}</a></li>
-                        <li><a href="#">{{ trans('strings.manage.users') }}</a></li>
+                        <li><a href="/customers/create">{{ trans('strings.manage.customers') }}</a></li>
+                        <li><a href="/users/create">{{ trans('strings.manage.users') }}</a></li>
                     </ul>
                 </li>
 

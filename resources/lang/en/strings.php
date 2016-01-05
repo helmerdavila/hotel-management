@@ -2,11 +2,31 @@
 
 return [
     'emailLabel'    => 'E-mail Address',
-    'forgot'        => 'Forgot your password?',
+    'error'         => [
+        'message' => 'There were some problems with your input',
+    ],
     'expenses'      => 'Expenses',
+    'forgot'        => 'Forgot your password?',
     'hi'            => 'Hi',
     'homeDashboard' => 'Home',
     'income'        => 'Income',
+    'label'         => [
+        'actions'           => 'Actions',
+        'create'            => 'Create',
+        'createUser'        => 'Create User',
+        'deleted'           => 'Deleted',
+        'deletedUsers'      => 'Deleted Users',
+        'document'          => 'Document',
+        'email'             => 'Email',
+        'emptyUsersDeleted' => 'There is no deleted users',
+        'lastname'          => 'Lastname',
+        'list'              => 'List',
+        'listUsers'         => 'List Users',
+        'moreData'          => 'More Info',
+        'name'              => 'Name',
+        'saveAndReserve'    => 'Save & Create Booking',
+        'saveOnly'          => 'Only Save',
+    ],
     'language'      => [
         'english' => 'English',
         'select'  => 'Language',
@@ -26,5 +46,6 @@ return [
     'settings'      => 'Settings',
     'users'         => 'Users',
     'welcome'       => 'Welcome to Hotel Management System',
+    'whoops'        => 'Whoops!',
     'yourSettings'  => 'Your Settings',
 ];

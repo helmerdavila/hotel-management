@@ -2,11 +2,31 @@
 
 return [
     'emailLabel'    => 'Correo Electrónico',
-    'forgot'        => '¿Olvidaste tu contraseña?',
+    'error'         => [
+        'message' => 'Hubo un problema con el ingreso',
+    ],
     'expenses'      => 'Egresos',
+    'forgot'        => '¿Olvidaste tu contraseña?',
     'hi'            => 'Hola',
     'homeDashboard' => 'Inicio',
     'income'        => 'Ingresos',
+    'label'         => [
+        'actions'           => 'Acciones',
+        'create'            => 'Crear',
+        'createUser'        => 'Crear Usuario',
+        'deleted'           => 'Eliminados',
+        'deletedUsers'      => 'Usuarios Eliminados',
+        'document'          => 'Documento',
+        'email'             => 'Correo',
+        'emptyUsersDeleted' => 'No hay usuarios eliminados',
+        'lastname'          => 'Apellidos',
+        'list'              => 'Listar',
+        'listUsers'         => 'Listar Usuarios',
+        'moreData'          => 'Más Datos',
+        'name'              => 'Nombre',
+        'saveAndReserve'    => 'Guardar y crear Reserva',
+        'saveOnly'          => 'Sólo Guardar',
+    ],
     'language'      => [
         'english' => 'Inglés',
         'select'  => 'Idioma',
@@ -26,5 +46,6 @@ return [
     'settings'      => 'Preferencias',
     'users'         => 'Usuarios',
     'welcome'       => 'Bienvenido al Sistema de Administración Hotelera',
+    'whoops'        => 'Ups!',
     'yourSettings'  => 'Tus preferencias',
 ];

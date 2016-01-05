@@ -1,4 +1,14 @@
 @charset "UTF-8";
+textarea {
+  resize: none; }
+
+.new-text-danger {
+  color: #e74c3c; }
+
+.table-responsive {
+  overflow-x: visible !important;
+  overflow-y: visible !important; }
+
 /*
  * Variables...
  */
@@ -185,7 +195,7 @@ td,
 th {
   padding: 0; }
 
-/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/build//css/main-524cda0f61.css */
+/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/build//css/main-6c025a9ab7.css */
 @media print {
   *,
   *:before,

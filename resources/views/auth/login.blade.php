@@ -14,7 +14,7 @@
                         {!! csrf_field() !!}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">{{ trans('strings.emailLabel') }}</label>
+                            <label class="col-md-4 control-label">{{ trans('strings.label.email') }}</label>
 
                             <div class="col-md-6">
                                 <input type="email" class="form-control spark-first-field" name="email" value="{{ old('email') }}">

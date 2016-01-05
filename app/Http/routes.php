@@ -28,4 +28,10 @@ Route::group([
 
     // Dashboard routes
     get('/dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@home']);
+
+    // User routes
+    get('/users/deleted', ['as' => 'users.deleted', 'uses' => 'UserController@deleted']);
+    resource('users', 'UserController');
+
+    resource('customers', 'CustomerController');
 });

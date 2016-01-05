@@ -11,7 +11,7 @@ return [
     | the validator class. Some of these rules have multiple versions such
     | such as the size rules. Feel free to tweak each of these messages.
     |
-    */
+     */
 
     'accepted'             => ':attribute debe ser aceptado.',
     'active_url'           => ':attribute no es una URL válida.',
@@ -86,11 +86,11 @@ return [
     | convention "attribute.rule" to name the lines. This makes it quick to
     | specify a specific custom language line for a given attribute rule.
     |
-    */
+     */
 
     'custom'               => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'name' => [
+            'required' => 'El nombre es requerido',
         ],
     ],
 
@@ -103,9 +103,9 @@ return [
     | with something more reader friendly such as E-Mail Address instead
     | of "email". This simply helps us make messages a little cleaner.
     |
-    */
+     */
 
-    'attributes' => [
+    'attributes'           => [
         //
     ],
 

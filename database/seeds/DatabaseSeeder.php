@@ -73,26 +73,26 @@ class StaffSeeder extends Seeder
 
         // Create Users and assign roles
         $adminUser = factory(Hotel\Models\User::class)->create([
-            'name'         => 'Admin',
-            'lastname_one' => 'Istrator',
-            'email'        => 'admin@admin.com',
-            'password'     => bcrypt('1234'),
+            'name'     => 'Admin',
+            'lastname' => 'Istrator',
+            'email'    => 'admin@admin.com',
+            'password' => bcrypt('1234'),
         ]);
         $adminUser->attachRole($admin);
 
         $staffUser = factory(Hotel\Models\User::class)->create([
-            'name'         => 'Staff',
-            'lastname_one' => 'Staff',
-            'email'        => 'staff@staff.com',
-            'password'     => bcrypt('1234'),
+            'name'     => 'Staff',
+            'lastname' => 'Staff',
+            'email'    => 'staff@staff.com',
+            'password' => bcrypt('1234'),
         ]);
         $staffUser->attachRole($staff);
 
         $customerUser = factory(Hotel\Models\User::class)->create([
-            'name'         => 'Customer',
-            'lastname_one' => 'Customer',
-            'email'        => 'customer@customer.com',
-            'password'     => bcrypt('1234'),
+            'name'     => 'Customer',
+            'lastname' => 'Customer',
+            'email'    => 'customer@customer.com',
+            'password' => bcrypt('1234'),
         ]);
         $customerUser->attachRole($customer);
     }

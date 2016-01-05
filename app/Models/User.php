@@ -9,10 +9,11 @@ use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract, HasRoleAndPermissionContract
 {
-    use Authenticatable, CanResetPassword, HasRoleAndPermission;
+    use Authenticatable, CanResetPassword, HasRoleAndPermission, SoftDeletes;
 
     /**
      * The database table used by the model.
@@ -26,7 +27,7 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = ['name', 'lastname', 'email', 'password', 'document', 'more_data'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -34,4 +35,16 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    protected $dates = ['deleted_at'];
+
+    /**
+     * Get All Staff Users
+     */
+    public function scopeOnlyStaff($query)
+    {
+        return $query->with('roles')->whereHas('roles', function ($role) {
+            $role->whereIn('roles.id', [1, 2]);
+        });
+    }
 }
