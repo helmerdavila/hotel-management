@@ -17,7 +17,7 @@ class LoginAndRegisterTest extends TestCase
             ->type('a@a.com', 'email')
             ->type('***lamePassword***', 'password')
             ->press(trans('strings.loginButton'))
-            ->seePageIs('/login');
+            ->seePageIs(route('getLogin'));
     }
 
     public function test_login_page_successful()
@@ -28,6 +28,7 @@ class LoginAndRegisterTest extends TestCase
             ->type('admin@admin.com', 'email')
             ->see(trans('strings.passwordLabel'))
             ->type('1234', 'password')
+            ->check('remember')
             ->press(trans('strings.loginButton'))
             ->seePageIs('/dashboard');
     }

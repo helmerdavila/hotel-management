@@ -1,7 +1,8 @@
 <?php
 
 Route::group([
-    'prefix' => LaravelLocalization::setLocale(),
+    'prefix'     => LaravelLocalization::setLocale(),
+    'middleware' => ['localeSessionRedirect', 'localizationRedirect'],
 ], function () {
 
     App::setLocale(LaravelLocalization::getCurrentLocale());
