@@ -32,4 +32,12 @@ class LoginAndRegisterTest extends TestCase
             ->press(trans('strings.loginButton'))
             ->seePageIs('/dashboard');
     }
+
+    public function test_reset_password_page_successful()
+    {
+        $this->visit('/login')
+            ->click(trans('strings.forgot'))
+            ->seePageIs('/password/email')
+            ->assertResponseOk();
+    }
 }
