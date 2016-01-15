@@ -20,7 +20,7 @@ class LoginAndRegisterTest extends TestCase
             ->seePageIs(route('getLogin'));
     }
 
-    public function test_login_page_successful()
+    public function test_login_successful()
     {
         $this->visit('/login')
             ->see(trans('strings.loginButton'))
