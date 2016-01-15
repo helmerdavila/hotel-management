@@ -24,8 +24,10 @@ return [
         'listUsers'         => 'List Users',
         'moreData'          => 'More Info',
         'name'              => 'Name',
+        'resetPassword'     => 'Reset Password',
         'saveAndReserve'    => 'Save & Create Booking',
         'saveOnly'          => 'Only Save',
+        'sendPassword'      => 'Send Password Reset Link',
     ],
     'language'      => [
         'english' => 'English',

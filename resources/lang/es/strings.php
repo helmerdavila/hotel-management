@@ -24,8 +24,10 @@ return [
         'listUsers'         => 'Listar Usuarios',
         'moreData'          => 'Más Datos',
         'name'              => 'Nombre',
+        'resetPassword'     => 'Restaurar Contraseña',
         'saveAndReserve'    => 'Guardar y crear Reserva',
         'saveOnly'          => 'Sólo Guardar',
+        'sendPassword'      => 'Enviar enlace para restaurar contraseña',
     ],
     'language'      => [
         'english' => 'Inglés',
