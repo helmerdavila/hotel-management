@@ -11,7 +11,7 @@
             </button>
 
             <!-- Branding Image -->
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="{{ LaravelLocalization::getLocalizedURL(null, '/') }}">
                 <i class="fa fa-building-o"></i> {{ env('APPLICATION_NAME', 'Hotel') }}
             </a>
         </div>
@@ -21,7 +21,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <!-- Login / Registration Links -->
                 <li>
-                    <a href="/login">
+                    <a href="{{ LaravelLocalization::getLocalizedURL(null, '/login') }}">
                         <i class="fa fa-key"></i>
                         {{ trans('strings.loginButton') }}
                     </a>

@@ -50,7 +50,9 @@
                             </div>
                         </li>
                         <li class="splash-nav-link splash-nav-link-highlight-border">
-                            <a href="/login"><i class="fa fa-key"></i> {{ trans('strings.loginButton') }}</a>
+                            <a href="{{ LaravelLocalization::getLocalizedURL(null, '/login') }}">
+                                <i class="fa fa-key"></i> {{ trans('strings.loginButton') }}
+                            </a>
                         </li>
                         {{-- <li class="splash-nav-link splash-nav-link-highlight-border"><a href="/register">Register</a></li> --}}
                     </ul>

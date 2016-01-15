@@ -1,10 +1,7 @@
 <?php
 
-get('language/{lang?}', ['as' => 'changeLanguage', 'uses' => 'Auth\AuthController@changeLanguage']);
-
 Route::group([
-    'prefix'     => LaravelLocalization::setLocale(),
-    'middleware' => ['localeSessionRedirect', 'localizationRedirect'],
+    'prefix' => LaravelLocalization::setLocale(),
 ], function () {
 
     App::setLocale(LaravelLocalization::getCurrentLocale());
